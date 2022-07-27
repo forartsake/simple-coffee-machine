@@ -24,6 +24,8 @@ while machine_is_on:
         money_machine.show_report()
     elif user_order == "off":
         machine_is_on = False
+    elif user_order == "profit":
+        money_machine.show_report()
     else:
         user_drink = menu.find_drink(user_order)
         if coffee_maker.is_resources_enough(user_drink) and money_machine.process_payment(user_drink.price):
